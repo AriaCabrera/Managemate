@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ManageMate - Tienda Online.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="main-header">
+      <div class="container container--flex">
+        <div class="main-header__container">
+          <h1 class="main-header__title">ManageMate</h1>
+          <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+          <nav class="main-nav" id="main-nav">
+            <ul class="menu">
+              <li class="menu__item"><a href="index.html" class="menu__link">INICIO</a></li>
+              <li class="menu__item"><a href="Paginas/Acercade.html" class="menu__link">¿QUIENES SOMOS?</a></li>
+              <li class="menu__item"><a href="Paginas/Tienda2.html" class="menu__link">TIENDA</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+        <div class="main-header__container">
+          <span class="main-header__txt"></span>
+          <p class="main-header__txt"><i class="fas fa-phone"></i> Telefono 5526547401</p>
+        </div>
+        <div class="main-header__container">
+          <a href="./Login/manageMate/pantallas/iniciar_sesion.php" class="main-header__link"> <i class=""></i><P>Iniciar Sesion</P></a>
+          <button id="checkout" class="button-checkout" onclick="pay()" > TOTAL<i class="fas fa-shopping-cart"></i> </button>
+          
+        </div>
+
+        
+      </div>
+    </header>
+    <div class="container-slider">
+      <div class="slider" id="slider">
+        <div class="slider__section">
+          <img src="Imagenes/Slider/Image1.jpg" alt="" class="slider__img">
+          <div class="slider__content">
+            <h2 class="slider__title"></h2>
+            <p class="slider__txt"></p>
+            <a href="Paginas/Tienda2.html" class="btn-shop">Compra Ahora</a>
+          </div>
+        </div>
+        <div class="slider__section">
+          <img src="Imagenes/Slider/Image2.png" alt="" class="slider__img">
+          <div class="slider__content">
+            <h2 class="slider__title"></h2>
+            <p class="slider__txt"></p>
+            <a href="Paginas/Tienda2.html" class="btn-shop">Compra Ahora</a>
+          </div>
+        </div>
+        <div class="slider__section">
+          <img src="Imagenes/Slider/Image3.png" alt="" class="slider__img">
+          <div class="slider__content">
+            <h2 class="slider__title"></h2>
+            <p class="slider__txt"></p>
+            <a href="Paginas/Tienda2.html" class="btn-shop">Compra Ahora</a>
+          </div>
+        </div>
+        <div class="slider__section">
+          <img src="Imagenes/Slider/Image4.jpg" alt="" class="slider__img">
+          <div class="slider__content">
+            <h2 class="slider__title"></h2>
+            <p class="slider__txt"></p>
+            <a href="Paginas/Tienda2.html" class="btn-shop">Compra Ahora </a>
+          </div>
+        </div>
+      </div>
+      <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+      <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+    </div>
+    <main class="main">
+      <div class="container">
+        <h2 class="main-title">PRODUCTOS</h2>
+        <section class="container-products">
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado1.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">NVIDEA GForce GT 1030</h3>
+              <span class="product__price">$3,129</span>
+            </div>
+            <button class="button-add" onclick="add ('NVIDEA GForce GT 1030',3129 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+            <button class="button-delete" onclick="delate ('NVIDEA GForce GT 1030',3129 )"> <i class="product__icon  "></i> </button>
+          </div>
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado2.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">Monitor Curvo XZEAL 27"</h3>
+              <span class="product__price">$5,059</span>
+            </div>
+            <button class="button-add" onclick="add ('Monitor Curvo XZEAL 27',5059 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado3.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">Procesador AMD Ryzen 9 3900x</h3>
+              <span class="product__price">$10,119</span>
+            </div>
+            <button class="button-add" onclick="add ('Procesador AMD Ryzen 9 3900x',10119 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado4.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">Kit RAM (4x16GB)</h3>
+              <span class="product__price">$9,289</span>
+            </div>
+            <button class="button-add" onclick="add ('Kit RAM (4x16GB)',9289 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+        </section>
+<!-- Segundo panel de agregados -->
+        <section class="container-products">
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado5.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">AOURUS NVIDEA GeForce RTX 3060 Ti 8GB</h3>
+              <span class="product__price">$20,260</span>
+            </div>
+            <button class="button-add" onclick="add ('AOURUS NVIDEA GeForce RTX 3060 Ti 8GB',20260 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado6.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">Tarjeta Madre Gigabyte ATX GA-A320M-H PARA SERIE RYZEN</h3>
+              <span class="product__price">$1,250</span>
+            </div>
+            <button class="button-add" onclick="add ('Tarjeta Madre Gigabyte ATX GA-A320M-H PARA SERIE RYZEN',1250 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado7.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">Mouse Logitech Optico G502 Hero Lightspeed. 16000 DP1</h3>
+              <span class="product__price">$2,050</span>
+            </div>
+            <button class="button-add" onclick="add ('Mouse Logitech Optico G502 Hero Lightspeed. 16000 DP1',2050 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+          <div class="product">
+            <img src="Imagenes/Slider/Agregado/Agregado8.jpg" alt="" class="product__img">
+            <div class="product__description">
+              <h3 class="product__title">Gabinete Corsair con RGB S/N Fuente.</h3>
+              <span class="product__price">$1,350</span>
+            </div>
+            <button class="button-add" onclick="add ('Gabinete Corsair con RGB S/N Fuente.',1350 )"> <i class="product__icon fas fa-cart-plus"></i> </button>
+          </div>
+        </section>
+        <!-- TESTIMONIOS  -->
+        
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="footer__section">
+        <h2 class="footer__title">Quienes somos.</h2>
+        <p class="footer__txt">Creamos el lugar más conveniente para comprar electrónica en México. Junto con nuestros clientes, continuamos innovándonos para seguir ofreciéndote el lugar más conveniente para realizar sus compras. Miles de usuarios visitan nuestra página cada día y disfrutan de nuestro excelente nivel de servicio al cliente. Te invitamos a leer las experiencias de nuestros clientes al comprar en ManageMate.</p>
+      </div>
+      <div class="footer__section">
+        <h2 class="footer__title">Ubicacion:</h2>
+        <p class="footer__txt">Av. Té 950, Granjas México, Iztacalco, 08400 Ciudad de México, CDMX</p>
+        <h2 class="footer__title">Contacto</h2>
+        <p class="footer__txt">Telefono :  123456789</p>
+        <p class="footer__txt">Email : Ventas@managemate.com.mx</p>
+      </div>
+      <div class="footer__section">
+        <h2 class="footer__title">Regreso</h2>
+        <a href="I" class="footer__link">Inicio</a>
+        <a href="Paginas/Acercade.html" class="footer__link">¿Quienes Somos?</a>
+        <a href="Paginas/Tienda2.html" class="footer__link">Tienda</a>
+      </div>
+      <div class="footer__section">
+        <h2 class="footer__title">Sign up </h2>
+        <p class="footer__txt">Suscribete para que te lleguen promociones</p>
+        <input type="email" class="footer__input" placeholder="Ingresa tu email">
+      </div>
+      <p class="copy">© 2021 ManageMate. Todos los derechos reservados | Diseñado por Solecitos Crew. </p>
+    </footer>
+<!-- partial -->
+  <script  src="./script.js"></script>  
+    
+
+</body>
+</html>
